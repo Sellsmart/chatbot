@@ -1,0 +1,483 @@
+html{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.unvisible{
+    opacity: 0;
+}
+input{
+    width: 47vw;
+    text-align: center;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 75px;
+    padding: 30px 60px 30px 60px;
+    color: white;
+    background: rgb(56,56,56);
+    background: linear-gradient(133deg, rgb(58, 51, 61) 26%, rgb(76, 31, 86) 77%);
+    margin-left: 7vw;
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 200ms;
+}
+input:hover{
+    scale: 1.02;
+}
+.pricetable{
+    padding-top: 100px;
+    width: 100vw;
+    height: 110vh;
+}
+.expl{
+    font-size: 20px;
+    margin-top: 30px
+}
+h6{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.price{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.what{
+    display: block;
+    font-size: 30px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+
+}
+.below{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+button{
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+button:hover{
+    scale: 0.98;
+    opacity: .9;
+}
+.buy{
+
+    width: 120px;
+    height: 50px;
+    background-color: orange;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.offer{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    width: 15vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    border: 2px solid orange;
+    min-height: 500px;
+    padding: 4vw;
+    border-radius: 4px;
+    padding-top: 10px;
+    transition-duration: 200ms;
+}
+.offer:hover{
+    scale: 1.02;
+}
+.section{
+    height: 100vh;
+    border-top: 1px solid black;
+    background: rgb(108,230,255);
+background: linear-gradient(180deg, rgba(108,230,255,0.486453956582633) 19%, rgba(14, 100, 117, 0.697) 80%);
+}
+.section2{
+    height: 100vh;
+    border-top: 1px solid black;
+    background: rgb(108,230,255);
+background: linear-gradient(180deg, rgba(196, 232, 239, 0.486) 19%, rgba(14, 100, 117, 0.384) 80%);
+}
+.section3{
+    height: 100vh;
+    border-top: 1px solid black;
+    background: rgb(108,230,255);
+background: linear-gradient(180deg, rgba(196, 232, 239, 0.486) 19%, rgba(14, 100, 117, 0.384) 80%);
+}
+header{
+    width: 100%;
+    height: 7vh;
+}
+embed{
+    opacity: 1; /* set initial opacity to 1 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: opacity 0.2s ease-in-out;
+    overflow-y: hidden;
+  }
+@keyframes head2 {
+    0%{position: relative; right: 500px;}
+    100%{position: relative; right: 0px;}
+}
+.split2{
+text-align: left;
+}
+h2{
+    display: inline-block;
+    padding-left: 140px;
+    text-align: left;
+    animation-name: head2;
+    animation-duration: 500ms;
+    font-size: 35px;
+
+}
+
+@-webkit-keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+.visible{
+    visibility: visible;
+}
+.marketingtext{
+    width: 47vw;
+    text-align: center;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 75px;
+    padding: 30px 60px 30px 60px;
+    color: white;
+    background: rgb(56,56,56);
+    background: linear-gradient(133deg, rgb(58, 51, 61) 26%, rgb(76, 31, 86) 77%);
+    margin-left: 7vw;
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.marketingtext3{
+    width: 47vw;
+    text-align: center;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 75px;
+    padding: 30px 60px 30px 60px;
+    color: white;
+    background: rgb(56,56,56);
+background: linear-gradient(133deg, rgb(44, 78, 87) 26%, rgb(31, 36, 86) 77%);
+    margin-left: 7vw;
+    opacity: 1;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.bottombutton{
+    width: 47vw;
+    text-align: center;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 75px;
+    padding: 30px 60px 30px 60px;
+    color: white;
+    background: rgb(56,56,56);
+background: linear-gradient(133deg, rgb(44, 78, 87) 26%, rgb(31, 36, 86) 77%);
+    margin-left: 7vw;
+    opacity: 1;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.marketingtext3:hover{
+    scale: 1.05;
+}
+.grad2{
+    width: 47vw;
+    text-align: center;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 75px;
+    padding: 30px 60px 30px 60px;
+    color: white;
+    background: rgb(56,56,56);
+background: linear-gradient(133deg, rgb(32, 32, 32) 26%, rgba(31, 54, 86, 0.504) 77%);
+margin-left: 7vw;
+opacity: 1;
+}
+h3{
+
+    margin-top: 200px;
+    width: 72vw;
+    position: relative;
+
+    display: inline-block;
+    text-align: center;
+    background: rgb(12, 167, 164);
+background: linear-gradient(117deg, rgb(53, 30, 112) 26%, rgb(43, 108, 112) 77%);
+    font-size: 70px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+h4{
+    padding-left: 140px;
+    text-align: left;
+  animation-delay: 0.5s;
+    font-size: 45px;
+}
+p{
+    font-size: 18px;
+    line-height: 1.1;
+}
+.toplink{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 18px;
+}
+h1{
+    width: 60vw;
+    margin-top: 30vh;
+    margin-left: 5vw;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+f{
+    background: rgb(78,61,255);
+background: linear-gradient(117deg, rgba(78,61,255,0.9038209033613446) 26%, rgba(0,212,255,0.8870141806722689) 100%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.downtext{
+    width: 40vw;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 400px;
+   text-align: left;
+   margin-left: 5vw;
+   letter-spacing: 1px;
+   font-size: 24px;
+   
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.novis{
+    display: none;
+}
+.split{
+
+    width: 40%;
+    text-align: left;
+}
+.callChat{
+    display: none;
+    opacity: 1; /* set initial opacity to 1 */
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    transition: opacity 0.2s ease-in-out;
+    overflow-y: hidden;
+}
+.leftstart{
+    width: 59vw;
+    display: inline-block;
+    height: 70vh;
+    vertical-align: top;
+
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5vw;
+}
+.start{
+    margin: 0;
+    height: 80vh;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,0.6965379901960784) 26%, rgba(0,212,255,0.702140231092437) 100%);
+padding-bottom: 100px;
+}
+.rightstart{
+    width: 29vw;
+    display: inline-block;
+    height: 70vh;
+    vertical-align: top;
+    margin-top: 200px;
+    padding-right: 5vw;
+}
+.startimage{
+    width: 29vw;
+    height: auto;
+    object-fit: scale-down;
+}
+
+@media only screen and (max-width: 600px) {
+    .toplink{
+        display: none;
+    }
+    .callChat{
+        width: 50px;
+        height: 50px;
+        background-size: 50px;
+        display: block;
+        background-image: url('bubble.png');
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+    h1{
+        margin-top: 5vh;
+        font-size: 60px;
+    }
+    embed{
+        animation-name: embedanimation;
+        width: 300px;
+        right: 20px;
+        animation-duration: 500ms;
+        border: none;
+        
+
+    }
+    @keyframes embedanimation {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+    .offer{
+        display: block;
+        width: 80vw;
+        margin-bottom: 50px;
+    }
+    .pricetable{
+        height: auto;
+    }
+    .split{
+        height: auto;
+        width: 100vw;
+    }
+    .split2{
+        height: auto;
+        width: 100vw;
+
+
+    }
+    input{
+        font-size: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    button{
+        
+    }
+
+    h3{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        margin-right: 0;
+        padding-right: 0;
+        font-size: 50px;
+        margin-top: 150px;
+    }
+    .section{
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .section2{
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .section3{
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .buy{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .downtext{
+        font-size: 20px;
+        width: 60vw;
+    }
+    .marketingtext{
+        font-size: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .marketingtext3{
+        font-size: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .bottombutton{
+        font-size: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        margin-bottom: 50px;
+    }
+    .grad2{
+        font-size: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .pc{
+        display: block;
+    }
+  }
