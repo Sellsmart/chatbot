@@ -6,7 +6,8 @@ const buttontrigger = document.getElementById('caller');
 
 check();
 window.addEventListener('scroll', function() {
-  if(window.innerWidth < 500){
+  if(window.innerWidth > 500){
+    console.log("Is bigger than 500 pixels");
     const contentHeight = content.offsetHeight;
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
