@@ -9,6 +9,8 @@ html{
 body{
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;    
 }
 
 .star{
@@ -937,13 +939,44 @@ h2{
     width: 40%;
     text-align: left;
 }
+.animg{
+    display: block;
+    background: url(email.png);
+    width: 400px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-position: center 40px;
+}
+.closeoverlap{
+    display: block;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 30px;
+    height: auto;
+    width: 30px;
+    margin-top: 10px;
+    font-size: 25px;
+    scale: 1;
+    margin-left: 10px;
+    background-color: #d0d0d0;
+    z-index: 15;
+}
+.a:hover{
+    scale: 1.1;
+}
 .overlapchatbot{
     display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: wheat;
+    background-color: #a7a7a7f5;
     z-index: 5;
+
     
 }
 .buysplit{
@@ -976,6 +1009,15 @@ h2{
 background: linear-gradient(180deg, rgba(255,255,255,0.6965379901960784) 26%, rgba(0,212,255,0.702140231092437) 100%);
 padding-bottom: 100px;
 }
+.custommobile{
+    display: none;
+    margin-top: 350px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    line-height: 1.3;
+}
 .rightstart{
     width: 29vw;
     display: inline-block;
@@ -994,15 +1036,31 @@ padding-bottom: 100px;
 }
 .emb{
     display: block;
+    height: 520px;
 }
 @media only screen and (max-width: 600px) {
     .toplink{
         display: none;
     }
+    .offertext{
+        display: none;
+    }
+    .willvanish{
+        display: none;
+    }
+    .custommobile{
+        display: block;
+    }
     .emb{
         display: none;
-        width: 100vw !important;
-        height: 100vh !important;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: 90vh;
+    }
+    .animg{
+        width: 80%;
+        margin-top: 40px;
     }
     .callChat{
         width: 50px;
@@ -1019,7 +1077,9 @@ padding-bottom: 100px;
     }
     embed{
         animation-name: embedanimation;
-        width: 300px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         right: 20px;
         animation-duration: 500ms;
         border: none;
@@ -1160,8 +1220,12 @@ padding-bottom: 100px;
         position: fixed;
         right: 10px;
         bottom: 10px;
-        background-color: black;
-        width: 50px;
-        height: 50px;
+        background-image: url(chatbotimg.png);
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        background-position: 7px;
     }
   }
