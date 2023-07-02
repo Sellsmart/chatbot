@@ -2,6 +2,7 @@ const content = document.getElementById('content');
 const fixedDiv = document.getElementById('embeded');
 const embededthing = document.getElementById('embeded');
 const buttontrigger = document.getElementById('caller');
+
 let endColVal1 = "";
 let endColVal2 = "";
 let endColVal3 = "";
@@ -9,9 +10,37 @@ let endColVal4 = "";
 let finalChatfield1 = document.getElementById("showchatfield");
 let finalChatfield2 = document.getElementById("showchatfield1");
 let finalInputfield = document.getElementById("showinputfield");
+let screensize = 0;
+let maxwidth = 600;
 
+console.log("Hey I am a test");
 check();
-window.addEventListener('scroll', function() {
+console.log(screensize);
+document.addEventListener('DOMContentLoaded', function() {
+  // Your code here
+console.log("Checking for server");
+console.log("NASA searching...");
+console.log("NASA hacked.. searching for documents..");
+
+document.addEventListener('scroll', function() {
+
+  var h = document.documentElement, 
+  b = document.body,
+  st = 'scrollTop',
+  sh = 'scrollHeight';
+
+var percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+
+console.log(percent);
+  if(window.innerWidth > 500){
+   
+    if (percent >= 8 && percent <= 20 || percent > 95) {
+      console.log("Is between the %"); // show fixed div between 30% and 70% scroll position
+      document.getElementById('embeded').classList.add('unvisible');
+    } else {
+      document.getElementById('embeded').classList.remove('unvisible');
+    }
+  }
   var target = document.querySelector('.staffcost');
     var targetPosition = target.getBoundingClientRect().top;
     var screenPosition = window.innerHeight;
@@ -21,19 +50,8 @@ window.addEventListener('scroll', function() {
             target.classList.add('underline-visible');
         }, 500); // Add a delay of 200 milliseconds before adding the class
     }
-  if(window.innerWidth > 500){
-    const contentHeight = content.offsetHeight;
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const totalHeight = contentHeight - windowHeight;
-    const scrollPercentage = Math.min(scrollPosition / totalHeight, 1) * 100; // calculate scroll percentage
-    if (scrollPercentage >= 8 && scrollPercentage <= 31) { // show fixed div between 30% and 70% scroll position
-      fixedDiv.classList.add('unvisible');
-    } else {
-      fixedDiv.classList.remove('unvisible');
-    }
-  }
   
+});
 });
 
 //GOOGLE CHART API START
@@ -54,20 +72,27 @@ function updateButtonPosition(){
   stickybutton.style.top = customiserel.style.top + "vh";*/
 }
 function deactivateAll(){
-  document.getElementById("customiser").classList.add("novis");
-  let elements = document.getElementsByClassName("willvanish");
-  let elements2 = document.getElementsByClassName("offertext");
-  if (elements.length > 0) {
-    elements[0].style.display = "block";
+  if(screensize > maxwidth){
+    document.getElementById("customiser").classList.add("novis");
+    let elements = document.getElementsByClassName("willvanish");
+    let elements2 = document.getElementsByClassName("offertext");
+    if (elements.length > 0) {
+      elements[0].style.display = "block";
+    }
+    if (elements2.length > 0) {
+      elements2[0].style.display = "block";
+    }
+    let toShow = document.getElementById("willshow");
+    toShow.classList.add("novis");
+    document.getElementById("splitter").scrollTop = 0;
   }
-  if (elements2.length > 0) {
-    elements2[0].style.display = "block";
-  }
-  let toShow = document.getElementById("willshow");
-  toShow.classList.add("novis");
-  document.getElementById("splitter").scrollTop = 0;
 }
- 
+function closeoverlap(){
+  console.log("pressed close button");
+  document.getElementById("overlap").classList.add("novis");
+  document.getElementById("embeded").style.display ="none";
+} 
+
 function openSecondDiv(){
   //document.getElementById("customiser").classList.add("novis");
   //document.getElementById("customiser2").classList.remove("novis");
@@ -357,6 +382,7 @@ function deactivateCustomiser(){
 }
 function check(){
   console.log("Client width: " + window.innerWidth)
+screensize = screen.width;
   /*if(window.innerWidth < 600){
     disableChat();
   }*/
