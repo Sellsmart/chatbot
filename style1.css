@@ -454,7 +454,7 @@ background: linear-gradient(43deg, rgba(51,97,255,1) 0%, rgba(169,203,0,1) 83%);
     height: auto;
 }
 .botl{
-    height: 50vh;
+    height: auto;
     padding-top: 50px;
     border-bottom: 1px solid black;
     padding-bottom: 50px;
@@ -575,6 +575,7 @@ transition: scale 200ms;
     height: auto;
 }
 .unvisible{
+    display: none;
     opacity: 0;
 }
 input{
@@ -1080,7 +1081,8 @@ padding-bottom: 100px;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-        right: 20px;
+        right: initial;
+        left: 20px;
         animation-duration: 500ms;
         border: none;
         
